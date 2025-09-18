@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TaskMe Settings</title>
+    <link rel="stylesheet" href="./styles/settings.css" />
+  </head>
+  <body>
+    <main class="settings">
+      <header>
+        <h1>TaskMe Settings</h1>
+        <p>Configure integrations, defaults, and privacy options.</p>
+      </header>
+      <form id="settings-form">
+        <section>
+          <h2>General</h2>
+          <label>
+            <span>Default duration (minutes)</span>
+            <input type="number" id="defaultDuration" min="15" step="5" />
+          </label>
+          <label>
+            <span>Timezone</span>
+            <input type="text" id="timezone" placeholder="e.g. America/New_York" />
+          </label>
+          <label>
+            <span>Confidence threshold</span>
+            <input type="number" id="confidenceThreshold" min="0" max="1" step="0.1" />
+          </label>
+        </section>
+        <section>
+          <h2>Google Calendar</h2>
+          <label>
+            <span>OAuth Client ID</span>
+            <input type="text" id="googleClientId" placeholder="your-client-id.apps.googleusercontent.com" />
+          </label>
+        </section>
+        <section>
+          <h2>Language Model</h2>
+          <label>
+            <span>Provider</span>
+            <select id="llmProvider">
+              <option value="openai">OpenAI</option>
+              <option value="local">Local Parser Only</option>
+            </select>
+          </label>
+          <label data-provider="openai">
+            <span>OpenAI API Key</span>
+            <input type="password" id="openAiApiKey" placeholder="sk-..." />
+          </label>
+        </section>
+        <section>
+          <h2>Privacy</h2>
+          <p>
+            TaskMe keeps recently created events locally to enable undo. No data is transmitted to
+            TaskMe servers.
+          </p>
+        </section>
+        <footer>
+          <button type="submit" class="primary">Save settings</button>
+          <span id="status" role="status" aria-live="polite"></span>
+        </footer>
+      </form>
+    </main>
+    <script type="module" src="./settings.js"></script>
+  </body>
+</html>

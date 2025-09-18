@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./styles/command-bar.css" />
+<div id="taskme-surface" class="taskme-surface" role="dialog" aria-modal="true">
+  <header class="taskme-header">
+    <div class="taskme-title">TaskMe</div>
+    <button id="taskme-close" class="taskme-icon-button" aria-label="Close">✕</button>
+  </header>
+  <main class="taskme-main">
+    <label class="taskme-field">
+      <span class="taskme-field-label">Describe your event</span>
+      <textarea id="taskme-input" class="taskme-input" rows="3" placeholder="Lunch with Sam tomorrow at noon"></textarea>
+    </label>
+    <section id="taskme-preview" class="taskme-preview empty" aria-live="polite"></section>
+  </main>
+  <footer class="taskme-footer">
+    <div class="taskme-actions">
+      <button id="taskme-undo" class="taskme-secondary">Undo last</button>
+      <button id="taskme-create" class="taskme-primary">Create event</button>
+    </div>
+    <div class="taskme-status" id="taskme-status"></div>
+  </footer>
+</div>

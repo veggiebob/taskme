@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "TaskMe - Natural Language Calendar",
+  "version": "1.0.0",
+  "description": "Create Google Calendar events using natural language input",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*",
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content-script.js"],
+      "css": ["ui/styles/content-overlay.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "TaskMe",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "commands": {
+    "open-command-bar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Open TaskMe command bar"
+    },
+    "undo-last-event": {
+      "suggested_key": {
+        "default": "Ctrl+Z",
+        "mac": "Command+Z"
+      },
+      "description": "Undo last created event"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "ui/command-bar.html",
+        "ui/styles/*.css",
+        "icons/*.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_ui": {
+    "page": "ui/settings.html",
+    "open_in_tab": true
+  }
+}

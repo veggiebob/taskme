@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TaskMe</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="popup-header">
+      <h1>TaskMe</h1>
+      <p>Natural language events for Google Calendar.</p>
+    </header>
+    <main>
+      <button id="open-command" class="primary">Open command bar</button>
+      <section>
+        <h2>Recent events</h2>
+        <ul id="recent-events" class="event-list"></ul>
+      </section>
+      <section class="hotkeys">
+        <h2>Shortcuts</h2>
+        <ul>
+          <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> — Open TaskMe</li>
+          <li><kbd>Ctrl</kbd> + <kbd>Z</kbd> — Undo last event</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <a href="../ui/settings.html" target="_blank">Open settings</a>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
