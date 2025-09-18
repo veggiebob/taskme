@@ -1,0 +1,85 @@
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 16px;
+  width: 320px;
+  color: #0f172a;
+}
+
+.popup-header h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.3rem;
+}
+
+.popup-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+button.primary {
+  width: 100%;
+  padding: 12px;
+  margin: 16px 0;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 12px;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.event-list li {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 8px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.event-list li .title {
+  font-weight: 600;
+}
+
+.event-list li .meta {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.hotkeys ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.hotkeys li {
+  margin-bottom: 4px;
+  color: #475569;
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  border: 1px solid #cbd5f5;
+  margin-right: 4px;
+  font-size: 0.75rem;
+}
+
+footer {
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #6366f1;
+  text-decoration: none;
+}
